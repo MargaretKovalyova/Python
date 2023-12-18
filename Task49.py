@@ -27,13 +27,13 @@ def get_info():
     is_valid_phone = False
     while not is_valid_phone:
         try:
-            phone_number = int(input("Введите номер: "))
+            phone_number = int(input("Введите номер телефона: "))
             if len(str(phone_number)) != 11:
                 raise LenNumberError("Неверная длина номера")
             else:
                 is_valid_phone = True
         except ValueError:
-            print("Нечитаемый номер!!!")
+            print("Нечитаемый номер!")
             continue
         except LenNumberError as err:
             print(err)
@@ -81,7 +81,7 @@ def copy_line(file_name, target_file, line_number):
         for i in range(2):
             if i != line_number - 1:
                 f_reader = DictReader(data)
-    print('копирование строки успешно')
+    print('Копирование строки успешно')
 
 target_file = 'target.csv'
 line_nimber = int(input('Введите номер строки: '))
